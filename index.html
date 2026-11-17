@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EduTechAcademy · Inscripción y certificación</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f7f3;--sf:#fff;--ink:#16211a;--mut:#506055;--g:#1d5a35;--gt:#e3efe6;--line:#cfdcd2;--ok:#1d5a35;--warn:#8a5a00;--err:#a8261c;--info:#1f5f8b;--on:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1712;--sf:#16211a;--ink:#e8efe9;--mut:#9db0a2;--g:#6fcf97;--gt:#1d2e23;--line:#2b3a30;--ok:#6fcf97;--warn:#e0b04a;--err:#ff8a7e;--info:#7cc0ee;--on:#0f1712;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0f1712;--sf:#16211a;--ink:#e8efe9;--mut:#9db0a2;--g:#6fcf97;--gt:#1d2e23;--line:#2b3a30;--ok:#6fcf97;--warn:#e0b04a;--err:#ff8a7e;--info:#7cc0ee;--on:#0f1712;color-scheme:dark}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.55 "Atkinson Hyperlegible",system-ui,sans-serif}
+.w{max-width:1040px;margin:0 auto;padding:0 18px}
+h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.1;margin:.2em 0 .3em;letter-spacing:-.02em}h2{font-size:1.6rem;margin:0 0 .4em}h3{font-size:1.05rem;margin:0 0 .4em}
+p{margin:.3em 0 .8em;max-width:68ch}.mut{color:var(--mut)}
+header.hero{padding:44px 0 28px}
+.track{display:flex;flex-wrap:wrap;gap:0;margin:22px 0 6px}
+.st{flex:1 1 140px;padding:14px 16px;background:var(--sf);border:2px solid var(--line);margin-right:-2px;font-weight:700}
+.st small{display:block;font-weight:400;color:var(--mut)}
+.st.done{background:var(--gt);border-color:var(--g)}.st.now{background:var(--g);color:var(--on);border-color:var(--g)}.st.now small{color:inherit}
+.cx{margin:8px 0;color:var(--err);font-weight:700}
+section{padding:30px 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.box{background:var(--sf);border:1px solid var(--line);border-radius:8px;padding:16px}
+.big{font-size:2rem;font-weight:700;color:var(--g);line-height:1.1}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:6}
+label{display:block;font-size:.9rem;color:var(--mut);margin:8px 0 3px}
+select,input[type=text],input[type=number]{width:100%;font:inherit;padding:9px 10px;border:2px solid var(--line);border-radius:6px;background:var(--sf);color:var(--ink)}
+.chk{display:flex;gap:8px;align-items:center;margin:6px 0;color:var(--ink);font-size:.95rem}
+button{font:inherit;font-weight:700;padding:9px 14px;border-radius:6px;border:2px solid var(--g);background:var(--g);color:var(--on);cursor:pointer;margin:4px 6px 4px 0}
+button.o{background:transparent;color:var(--g)}button.d{border-color:var(--err);background:transparent;color:var(--err)}
+:focus-visible{outline:3px solid var(--info);outline-offset:2px}
+.sim{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:22px;align-items:start}
+@media(max-width:820px){.sim{grid-template-columns:1fr}}
+.feed{display:flex;flex-direction:column;gap:10px;max-height:78vh;overflow:auto}
+.r{background:var(--sf);border:1px solid var(--line);border-left:7px solid var(--c);border-radius:6px;padding:12px 14px}
+.r b.t{color:var(--c)}.r .s{margin:.3em 0 0;color:var(--mut)}.r .m{margin:.2em 0;max-width:none}
+.r .k{float:right;font-size:.8rem;color:var(--mut)}
+.r.ok{--c:var(--ok)}.r.warn{--c:var(--warn)}.r.err{--c:var(--err)}.r.info{--c:var(--info)}
+.tw{overflow-x:auto;margin-top:8px}table{border-collapse:collapse;font-size:.88rem;width:100%}td,th{padding:4px 8px;border-bottom:1px solid var(--line);text-align:left;white-space:nowrap}
+.chips button{font-weight:400;font-size:.92rem;padding:6px 10px}
+ul{padding-left:1.2em;margin:.3em 0}li{margin:.25em 0}
+.tag{display:inline-block;padding:1px 8px;border-radius:99px;background:var(--gt);font-size:.85rem;margin:2px 4px 2px 0}
+footer{padding:26px 0 40px;border-top:1px solid var(--line);color:var(--mut)}a{color:var(--info)}
+</style></head><body>
+<header class="hero"><div class="w">
+<h1>Inscríbete, paga y certifícate</h1>
+<p>EduTechAcademy ofrece cursos presenciales y en línea. Esta página te muestra cómo funciona el sistema y te deja probarlo: cada acción responde con un mensaje claro, tanto cuando sale bien como cuando algo no se puede hacer.</p>
+<div class="track" id="track" aria-live="polite"></div><div class="cx" id="cx"></div>
+<p class="mut" id="trk">Elige o crea una solicitud abajo y verás aquí en qué paso va.</p>
+</div></header>
+
+<div class="w"><section id="como"><h2>Cómo funciona</h2>
+<div class="grid">
+<div class="box"><h3>1. Solicitas</h3><p>Eliges un curso y cuántos lugares quieres. La solicitud queda registrada.</p></div>
+<div class="box"><h3>2. Control Escolar aprueba</h3><p>Se revisa que el alumno esté activo, que haya autorización y que el curso esté disponible. Al aprobar, se aparta tu lugar.</p></div>
+<div class="box"><h3>3. Pagas</h3><p>El pago debe ser exactamente el total. Con el pago quedas inscrito.</p></div>
+<div class="box"><h3>4. Cursas y te certificas</h3><p>El instructor registra calificación y asistencia. Recibes certificación con calificación de 70 o más y asistencia de 80 % o más.</p></div>
+</div><p class="mut">Puedes cancelar mientras el curso no haya terminado; al cancelar se libera tu lugar.</p></section>
+
+<section id="prueba"><h2>Pruébalo</h2>
+<p>Todo ocurre en esta página con los 20 cursos y 40 alumnos reales del proyecto. No se envía nada a ningún servidor.</p>
+<div class="bar"><label for="rol" style="margin:0 0 3px">¿Quién eres? Cada persona solo puede hacer algunas acciones.</label>
+<select id="rol"></select></div>
+<div class="box" style="margin:14px 0"><h3>Casos listos para ver</h3><p class="mut" style="margin-bottom:6px">Un clic ejecuta el caso completo y muestra cada respuesta.</p><div class="chips" id="chips"></div></div>
+<div class="sim"><div>
+<div class="box"><h3>Cursos</h3><button onclick="go('ver_programas',{})">Ver todos</button>
+<label for="pc">Buscar por código</label><input type="text" id="pc" placeholder="EDU-P001"><button class="o" onclick="go('ver_programas',{id:v('pc')})">Buscar curso</button></div>
+<div class="box" style="margin-top:12px"><h3>Nueva solicitud</h3>
+<label for="al">Alumno</label><select id="al"></select><label for="cu">Curso</label><select id="cu"></select>
+<label for="q">Lugares</label><input type="number" id="q" value="1">
+<div class="chk"><input type="checkbox" id="aut" checked><label for="aut" style="margin:0;color:inherit">Con autorización de Control Escolar</label></div>
+<div class="chk"><input type="checkbox" id="pro"><label for="pro" style="margin:0;color:inherit">Con promoción activa</label></div>
+<button onclick="go('crear',{al:v('al'),pr:v('cu'),q:v('q'),aut:c('aut'),promo:c('pro')})">Crear solicitud</button></div>
+<div class="box" style="margin-top:12px"><h3>Una solicitud</h3>
+<label for="sid">Número de solicitud</label><input type="text" id="sid" list="sl" placeholder="Crea una o escribe EDU-O999"><datalist id="sl"></datalist>
+<p class="mut" id="tot" style="margin:6px 0"></p>
+<button class="o" onclick="go('validar',{id:v('sid')})">Revisar requisitos</button><button class="o" onclick="go('beneficio',{id:v('sid')})">Ver beneficio</button><button class="o" onclick="go('eventos',{id:v('sid')})">Ver historial</button><br>
+<button onclick="go('aprobar',{id:v('sid')})">Aprobar</button><button class="d" onclick="go('cancelar',{id:v('sid')})">Cancelar</button><button onclick="go('completar',{id:v('sid')})">Finalizar curso</button>
+<label for="mo">Pagar (monto en pesos)</label><input type="text" id="mo" placeholder="Total exacto"><button onclick="go('pago',{id:v('sid'),monto:v('mo')})">Registrar pago</button>
+<label for="ca">Calificación (0 a 100)</label><input type="text" id="ca" value="85"><label for="as">Asistencia % (0 a 100)</label><input type="text" id="as" value="90">
+<button onclick="go('resultado',{id:v('sid'),cal:v('ca'),asi:v('as')})">Registrar resultado</button><button onclick="go('cert',{id:v('sid')})">Ver certificación</button></div>
+<div class="box" style="margin-top:12px"><h3>Listado y datos</h3><label for="fe">Filtrar por estado</label><select id="fe"><option value="">Todos</option></select>
+<button onclick="go('listar',{estado:v('fe')})">Ver solicitudes</button><button class="o" onclick="go('seed',{})">Cargar datos iniciales</button><button class="d" onclick="reiniciar()">Reiniciar demo</button></div>
+</div>
+<div><h3>Respuestas del sistema</h3><div class="feed" id="feed" aria-live="polite"><p class="mut">Aquí aparecerá cada respuesta, la más reciente arriba.</p></div></div></div></section>
+
+<section id="reglas"><h2>Reglas que verás en acción</h2><div class="grid">
+<div class="box"><h3>Lugares limitados</h3><p>Si no quedan lugares, la solicitud no se aprueba.</p></div>
+<div class="box"><h3>Pago exacto</h3><p>Un monto distinto al total se rechaza y la solicitud sigue pendiente de pago.</p></div>
+<div class="box"><h3>Cada quien su función</h3><p>Solo el instructor registra calificaciones; solo Control Escolar aprueba y finaliza.</p></div>
+<div class="box"><h3>Sin saltos</h3><p>No se puede pagar sin aprobar ni finalizar sin pagar. El estado no cambia si se intenta.</p></div></div></section>
+
+<section id="alcance"><h2>Qué incluye hoy</h2><div class="grid">
+<div class="box"><h3>Listo</h3><ul><li>12 de 18 historias de usuario completas y 3 parciales</li><li>Inscripción, pago, evaluación y certificación</li><li>API con Swagger, PostgreSQL, Docker, CI/CD y despliegue</li></ul></div>
+<div class="box"><h3>Solo diseñado</h3><ul><li>Cursos del instructor, cambio de grupo y sustitución de instructor</li><li>Inicio de sesión real: hoy el rol se elige a mano</li><li>Pasarela de pagos</li></ul></div>
+<div class="box"><h3>Calidad</h3><div class="big">236</div><p>pruebas automáticas pasan, con 94.43 % de cobertura.</p></div></div></section>
+
+<footer><div class="w"><p>Proyecto integrador de Componentes de Lógica de Negocio · UANL FIME · Valeria Ordaz García, Luis José Mendoza Serrano y Omar Alejandro Salazar Castro.</p>
+<p><a href="https://github.com/Vale-Ord/EduTechAcademy_PIA">Repositorio en GitHub</a> · <a href="https://edutech-academy-api-6s0l.onrender.com/docs">Sistema real (Swagger)</a></p></div></footer></div>
+
+<script>
+const D={"p":[["EDU-P001","Cloud 01",566.0,13,1],["EDU-P002","Data Science 02",637.0,16,1],["EDU-P003","Ciberseguridad 03",708.0,19,1],["EDU-P004","Desarrollo Web 04",779.0,22,1],["EDU-P005","Cloud 05",850.0,25,1],["EDU-P006","Data Science 06",921.0,28,1],["EDU-P007","Ciberseguridad 07",992.0,31,1],["EDU-P008","Desarrollo Web 08",1063.0,34,1],["EDU-P009","Cloud 09",1134.0,37,1],["EDU-P010","Data Science 10",1205.0,40,1],["EDU-P011","Ciberseguridad 11",1276.0,43,0],["EDU-P012","Desarrollo Web 12",1347.0,46,1],["EDU-P013","Cloud 13",1418.0,49,1],["EDU-P014","Data Science 14",1489.0,52,1],["EDU-P015","Ciberseguridad 15",1560.0,10,1],["EDU-P016","Desarrollo Web 16",1631.0,13,1],["EDU-P017","Cloud 17",1702.0,16,1],["EDU-P018","Data Science 18",1773.0,19,1],["EDU-P019","Ciberseguridad 19",1844.0,22,1],["EDU-P020","Desarrollo Web 20",1915.0,25,1]],"a":[["EDU-C001","Alumno 01",0,1],["EDU-C002","Alumno 02",0,1],["EDU-C003","Alumno 03",0,1],["EDU-C004","Alumno 04",0,1],["EDU-C005","Alumno 05",1,1],["EDU-C006","Alumno 06",0,1],["EDU-C007","Alumno 07",0,0],["EDU-C008","Alumno 08",0,1],["EDU-C009","Alumno 09",0,1],["EDU-C010","Alumno 10",1,1],["EDU-C011","Alumno 11",0,1],["EDU-C012","Alumno 12",0,1],["EDU-C013","Alumno 13",0,1],["EDU-C014","Alumno 14",0,0],["EDU-C015","Alumno 15",1,1],["EDU-C016","Alumno 16",0,1],["EDU-C017","Alumno 17",0,1],["EDU-C018","Alumno 18",0,1],["EDU-C019","Alumno 19",0,1],["EDU-C020","Alumno 20",1,1],["EDU-C021","Alumno 21",0,0],["EDU-C022","Alumno 22",0,1],["EDU-C023","Alumno 23",0,1],["EDU-C024","Alumno 24",0,1],["EDU-C025","Alumno 25",1,1],["EDU-C026","Alumno 26",0,1],["EDU-C027","Alumno 27",0,1],["EDU-C028","Alumno 28",0,0],["EDU-C029","Alumno 29",0,1],["EDU-C030","Alumno 30",1,1],["EDU-C031","Alumno 31",0,1],["EDU-C032","Alumno 32",0,1],["EDU-C033","Alumno 33",0,1],["EDU-C034","Alumno 34",0,1],["EDU-C035","Alumno 35",1,0],["EDU-C036","Alumno 36",0,1],["EDU-C037","Alumno 37",0,1],["EDU-C038","Alumno 38",0,1],["EDU-C039","Alumno 39",0,1],["EDU-C040","Alumno 40",1,1]]};
+const R={estudiante:"Estudiante",instructor:"Instructor",control_escolar:"Control Escolar",administracion:"Administración",cliente_empresarial:"Cliente empresarial"};
+const ALL="estudiante instructor control_escolar administracion cliente_empresarial";
+const PM={ver_programas:[ALL,"consultar cursos"],crear:["estudiante control_escolar cliente_empresarial","crear solicitudes"],listar:["estudiante instructor control_escolar administracion","ver solicitudes"],eventos:["estudiante instructor control_escolar administracion","ver el historial"],validar:["control_escolar","revisar requisitos"],beneficio:["control_escolar","ver el beneficio"],aprobar:["control_escolar","aprobar solicitudes"],pago:["estudiante control_escolar","registrar pagos"],completar:["control_escolar","finalizar cursos"],cancelar:["estudiante control_escolar","cancelar solicitudes"],resultado:["instructor","registrar calificaciones"],cert:["estudiante control_escolar","ver la certificación"],seed:["control_escolar","cargar datos iniciales"]};
+const TI={200:"Listo",201:"Solicitud creada",400:"Dato fuera de rango",403:"No tienes permiso",404:"No existe",409:"No disponible en este momento",422:"No cumple una regla"};
+const ST=["SOLICITADA","ACEPTADA","INSCRITA","FINALIZADA"],SN={SOLICITADA:"Solicitada",ACEPTADA:"Aprobada",INSCRITA:"Inscrita",FINALIZADA:"Finalizada",CANCELADA:"Cancelada"};
+const SH={SOLICITADA:"esperando aprobación",ACEPTADA:"pendiente de pago",INSCRITA:"cursando",FINALIZADA:"curso terminado"};
+let P,A,sol,ev,seq,last,role="control_escolar";
+const $=i=>document.getElementById(i),v=i=>$(i).value.trim(),c=i=>$(i).checked;
+const money=n=>"$"+Number(n).toLocaleString("es-MX",{minimumFractionDigits:2});
+const E=(code,m,s,d)=>({c:code,m,s,d});
+function reset(){P=D.p.map(x=>({id:x[0],n:x[1],pr:x[2],cap:x[3],hab:x[4],oc:0}));A=D.a.map(x=>({id:x[0],n:x[1],pref:x[2],act:x[3]}));sol=[];ev=[];seq=1;last=null}
+const gs=id=>sol.find(s=>s.id==id),gp=id=>P.find(p=>p.id==id),ga=id=>A.find(a=>a.id==id);
+const nf=id=>E(404,`No encontramos la solicitud “${id||"(vacía)"}”.`,"Revisa el número o crea una nueva solicitud.");
+const lg=(s,t)=>ev.push({sol:s.id,evento:t,hora:new Date().toLocaleTimeString("es-MX")});
+const mot=s=>{const m=[],a=ga(s.al),p=gp(s.pr);if(!a.act)m.push("el alumno no está activo");if(!s.aut)m.push("falta la autorización de Control Escolar");if(!p.hab)m.push(`el curso ${p.n} está deshabilitado`);return m};
+const F={
+ver_programas(a){if(a.id){const p=gp(a.id);return p?E(200,`${p.n}: ${money(p.pr)}, ${p.cap-p.oc} de ${p.cap} lugares libres${p.hab?"":" (deshabilitado)"}.`,"Para inscribirte, crea una solicitud."):E(404,`El curso “${a.id}” no existe.`,"Revisa el código; los cursos van de EDU-P001 a EDU-P020.")}
+return E(200,`Hay ${P.length} cursos.`,"Elige uno para solicitar tu lugar.",P.map(p=>({Código:p.id,Curso:p.n,Precio:money(p.pr),Libres:p.cap-p.oc,Estado:p.hab?"Disponible":"No disponible"})))},
+crear(a){const al=ga(a.al),p=gp(a.pr);if(!al)return E(404,`El alumno “${a.al}” no está registrado.`,"Elige un alumno de la lista.");if(!p)return E(404,`El curso “${a.pr}” no existe.`,"Elige un curso de la lista.");
+const q=Number(a.q);if(!Number.isInteger(q)||q<1)return E(422,"La cantidad de lugares debe ser un número entero de 1 o más.","Corrige la cantidad e inténtalo de nuevo.");
+const s={id:"EDU-O"+(100+seq++),al:al.id,pr:p.id,q,aut:a.aut,promo:a.promo,e:"SOLICITADA",tot:p.pr*q,cal:null,asi:null};sol.push(s);last=s.id;lg(s,"Solicitud creada");sel(s.id);
+return E(201,`Solicitud ${s.id} creada para ${al.n}: ${q} lugar(es) en ${p.n}. Total ${money(s.tot)}.`,"Siguiente paso: Control Escolar la aprueba.")},
+validar(a){const s=gs(a.id);if(!s)return nf(a.id);const m=mot(s);return m.length?E(200,"La solicitud todavía no puede procesarse: "+m.join("; ")+".","Corrige esos puntos antes de aprobar."):E(200,"La solicitud cumple todos los requisitos.","Ya puede aprobarse.")},
+beneficio(a){const s=gs(a.id);if(!s)return nf(a.id);const al=ga(s.al),ok=al.pref&&s.tot>=1500&&!s.promo;return E(200,ok?"Aplica el beneficio de referencia (alumno preferente, total de $1,500 o más y sin promoción).":"No aplica el beneficio: se necesita alumno preferente, total de $1,500 o más y sin promoción activa.","El beneficio es informativo y no cambia el precio.")},
+aprobar(a){const s=gs(a.id);if(!s)return nf(a.id);if(s.e!="SOLICITADA")return E(409,s.e=="ACEPTADA"?"Esta solicitud ya había sido aprobada antes.":`Esta solicitud está ${SN[s.e].toLowerCase()} y ya no se puede aprobar.`,"No se hizo ningún cambio.");
+const m=mot(s);if(m.length)return E(422,"No se puede aprobar: "+m.join("; ")+".","Corrige el problema; la solicitud sigue igual.");const p=gp(s.pr);if(s.q>p.cap-p.oc)return E(409,`No hay lugares suficientes: pides ${s.q} y quedan ${p.cap-p.oc} en ${p.n}.`,"Pide menos lugares o elige otro curso.");
+p.oc+=s.q;s.e="ACEPTADA";lg(s,"Solicitud aprobada");return E(200,`Solicitud aprobada. Se apartaron ${s.q} lugar(es); quedan ${p.cap-p.oc}.`,`Siguiente paso: pagar exactamente ${money(s.tot)}.`)},
+pago(a){const s=gs(a.id);if(!s)return nf(a.id);if(s.e!="ACEPTADA")return E(409,s.e=="SOLICITADA"?"Primero hay que aprobar la solicitud; todavía no se puede pagar.":s.e=="INSCRITA"||s.e=="FINALIZADA"?"Esta solicitud ya estaba pagada.":"La solicitud está cancelada y no admite pagos.","No se hizo ningún cambio.");
+const m=Number(String(a.monto).replace(/[$,]/g,""));if(!a.monto||isNaN(m)||Math.abs(m-s.tot)>.001)return E(422,`El pago debe ser exactamente ${money(s.tot)}; recibimos ${a.monto?money(isNaN(m)?0:m):"ningún monto"}.`,"Escribe el total exacto. La solicitud sigue pendiente de pago.");
+s.e="INSCRITA";lg(s,"Pago recibido; inscripción confirmada");return E(200,"Pago recibido. Quedaste inscrito.","Siguiente paso: el instructor registra calificación y asistencia.")},
+completar(a){const s=gs(a.id);if(!s)return nf(a.id);if(s.e!="INSCRITA")return E(409,`No se puede finalizar: la solicitud está ${SN[s.e].toLowerCase()}. Solo se finaliza una inscripción pagada.`,"No se hizo ningún cambio.");s.e="FINALIZADA";lg(s,"Curso finalizado");return E(200,"Curso finalizado.","Ya puede consultarse la certificación.")},
+cancelar(a){const s=gs(a.id);if(!s)return nf(a.id);if(s.e=="FINALIZADA"||s.e=="CANCELADA")return E(409,`La solicitud ya está ${SN[s.e].toLowerCase()}; no se puede cancelar.`,"No se hizo ningún cambio.");if(s.e!="SOLICITADA")gp(s.pr).oc-=s.q;s.e="CANCELADA";lg(s,"Solicitud cancelada");return E(200,"Solicitud cancelada. Los lugares apartados quedaron libres otra vez.","Puedes crear una nueva solicitud cuando quieras.")},
+resultado(a){const s=gs(a.id);if(!s)return nf(a.id);const k=Number(a.cal),h=Number(a.asi);if(s.e!="INSCRITA")return E(422,"Solo se registra resultado de una inscripción confirmada (pagada).","Primero aprueba y registra el pago.");
+if(a.cal===""||a.asi===""||isNaN(k)||isNaN(h)||k<0||k>100||h<0||h>100)return E(422,"La calificación y la asistencia deben estar entre 0 y 100.","Corrige los valores; no se guardó nada.");s.cal=k;s.asi=h;lg(s,`Resultado registrado (${k} / ${h} %)`);return E(200,`Resultado guardado: calificación ${k}, asistencia ${h} %.`,"Siguiente paso: finalizar el curso y consultar la certificación.")},
+cert(a){const s=gs(a.id);if(!s)return nf(a.id);if(s.e!="FINALIZADA")return E(409,"La certificación se evalúa cuando el curso está finalizado.",`Estado actual: ${SN[s.e].toLowerCase()}.`);if(s.cal==null)return E(422,"Aún no hay calificación y asistencia registradas.","El instructor debe registrarlas.");
+const bc=s.cal>=70,ba=s.asi>=80;lg(s,"Certificación evaluada");return bc&&ba?E(200,`Certificación: ELEGIBLE (calificación ${s.cal}, asistencia ${s.asi} %).`,"Cumple los dos criterios."):E(200,`Certificación: NO ELEGIBLE. Motivo: ${!bc&&!ba?"calificación y asistencia":!bc?"calificación":"asistencia"} (se pide 70 o más y 80 % o más; obtuvo ${s.cal} y ${s.asi} %).`,"Consulta con Control Escolar las opciones disponibles.")},
+listar(a){const l=sol.filter(s=>!a.estado||s.e==a.estado);return l.length?E(200,`Hay ${l.length} solicitud(es).`,"Elige una para continuar.",l.map(s=>({Número:s.id,Alumno:s.al,Curso:s.pr,Lugares:s.q,Total:money(s.tot),Estado:SN[s.e]}))):E(200,"No hay solicitudes con ese filtro.","Crea una nueva solicitud para empezar.")},
+eventos(a){const s=gs(a.id);if(!s)return nf(a.id);const l=ev.filter(e=>e.sol==s.id);return E(200,`Historial de ${s.id}: ${l.length} movimiento(s).`,"Se muestran en orden.",l.map(e=>({Movimiento:e.evento,Hora:e.hora})))},
+seed(){return E(200,`Los datos iniciales ya estaban cargados (${A.length} alumnos y ${P.length} cursos). No se duplicó nada.`,"Puedes seguir trabajando; “Reiniciar demo” borra tus pruebas.")}};
+function run(fn,a){const [ok,nom]=PM[fn];return ok.split(" ").includes(role)?F[fn](a):E(403,`Con el rol ${R[role]} no puedes ${nom}.`,"Esto lo hace: "+ok.split(" ").map(x=>R[x]).join(", ")+". Cambia el rol arriba.")}
+function show(r,cap){const k=r.c<300?"ok":r.c==409?"warn":r.c==400||r.c==422?"warn":r.c==404?"info":"err";const f=$("feed");if(f.querySelector("p.mut"))f.innerHTML="";
+let h=`<div class="r ${k}"><span class="k">Código ${r.c} · ${R[role]}</span><b class="t">${cap?cap+" · ":""}${TI[r.c]}</b><p class="m">${r.m}</p><p class="s">${r.s||""}</p>`;
+if(r.d&&r.d.length){const ks=Object.keys(r.d[0]);h+=`<div class="tw"><table><tr>${ks.map(x=>`<th>${x}</th>`).join("")}</tr>${r.d.map(o=>`<tr>${ks.map(x=>`<td>${o[x]}</td>`).join("")}</tr>`).join("")}</table></div>`}
+f.insertAdjacentHTML("afterbegin",h+"</div>")}
+function go(fn,a,cap){show(run(fn,a),cap);sync()}
+function sel(id){$("sid").value=id}
+function sync(){$("sl").innerHTML=sol.map(s=>`<option value="${s.id}">`).join("");tot();const s=gs(v("sid"));const t=$("track");
+if(!s){t.innerHTML=ST.map(x=>`<div class="st">${SN[x]}<small>${SH[x]}</small></div>`).join("");$("cx").textContent="";$("trk").textContent="Elige o crea una solicitud abajo y verás aquí en qué paso va.";return}
+const i=ST.indexOf(s.e);t.innerHTML=ST.map((x,j)=>`<div class="st ${s.e!="CANCELADA"&&j<i?"done":s.e!="CANCELADA"&&j==i?"now":""}">${SN[x]}<small>${SH[x]}</small></div>`).join("");
+$("cx").textContent=s.e=="CANCELADA"?"Esta solicitud fue cancelada.":"";$("trk").textContent=`Solicitud ${s.id}: ${SN[s.e]}. Total ${money(s.tot)}.`}
+function tot(){const s=gs(v("sid"));$("tot").textContent=s?`Total a pagar: ${money(s.tot)} · Estado: ${SN[s.e]}`:""}
+function reiniciar(){reset();$("feed").innerHTML='<p class="mut">Demo reiniciada.</p>';$("sid").value="";sync()}
+const fl=(al,pr,q,k,h)=>[["control_escolar","crear",{al,pr,q,aut:1}],["control_escolar","aprobar"],["control_escolar","pago",{monto:"@t"}],["instructor","resultado",{cal:k,asi:h}],["control_escolar","completar"],["control_escolar","cert"]];
+const SC={
+"Inscripción completa":()=>fl("EDU-C005","EDU-P001",2,85,90),
+"Aprobar dos veces / saltar pasos":()=>[["control_escolar","crear",{al:"EDU-C005",pr:"EDU-P002",q:1,aut:1}],["control_escolar","aprobar"],["control_escolar","aprobar"],["control_escolar","crear",{al:"EDU-C005",pr:"EDU-P002",q:1,aut:1}],["control_escolar","pago",{monto:"637"}],["control_escolar","completar"]],
+"Pago incorrecto":()=>[["control_escolar","crear",{al:"EDU-C005",pr:"EDU-P003",q:2,aut:1}],["control_escolar","aprobar"],["control_escolar","pago",{monto:"100"}],["control_escolar","pago",{monto:"@t"}],["control_escolar","pago",{monto:"@t"}]],
+"Sin permiso":()=>[["control_escolar","crear",{al:"EDU-C005",pr:"EDU-P001",q:1,aut:1}],["estudiante","aprobar"],["estudiante","resultado",{cal:90,asi:90}],["cliente_empresarial","listar",{}],["instructor","crear",{al:"EDU-C005",pr:"EDU-P001",q:1,aut:1}]],
+"Alumno inactivo, sin autorización o curso cerrado":()=>{const i=A.find(x=>!x.act).id,d=P.find(x=>!x.hab).id;return[["control_escolar","crear",{al:i,pr:"EDU-P001",q:1,aut:1}],["control_escolar","aprobar"],["control_escolar","crear",{al:"EDU-C005",pr:"EDU-P001",q:1,aut:0}],["control_escolar","aprobar"],["control_escolar","crear",{al:"EDU-C005",pr:d,q:1,aut:1}],["control_escolar","aprobar"]]},
+"Algo no existe":()=>[["control_escolar","aprobar",{id:"EDU-O999"}],["control_escolar","crear",{al:"EDU-C999",pr:"EDU-P001",q:1,aut:1}],["control_escolar","crear",{al:"EDU-C005",pr:"EDU-P999",q:1,aut:1}],["estudiante","ver_programas",{id:"EDU-P999"}]],
+"Sin lugares":()=>[["control_escolar","crear",{al:"EDU-C005",pr:"EDU-P001",q:14,aut:1}],["control_escolar","aprobar"],["control_escolar","crear",{al:"EDU-C006",pr:"EDU-P001",q:13,aut:1}],["control_escolar","aprobar"],["control_escolar","crear",{al:"EDU-C007",pr:"EDU-P001",q:1,aut:1}],["control_escolar","aprobar"]],
+"Certificación: elegible y no elegible":()=>[...fl("EDU-C005","EDU-P004",1,70,80),...fl("EDU-C006","EDU-P004",1,69,90),...fl("EDU-C007","EDU-P004",1,90,79),...fl("EDU-C008","EDU-P004",1,60,50)],
+"Datos inválidos":()=>[["control_escolar","crear",{al:"EDU-C005",pr:"EDU-P001",q:0,aut:1}],["control_escolar","crear",{al:"EDU-C005",pr:"EDU-P001",q:1,aut:1}],["control_escolar","aprobar"],["control_escolar","pago",{monto:"@t"}],["instructor","resultado",{cal:101,asi:90}],["instructor","resultado",{cal:"",asi:90}]],
+"Cancelar libera el lugar":()=>[["control_escolar","crear",{al:"EDU-C005",pr:"EDU-P005",q:3,aut:1}],["control_escolar","aprobar"],["control_escolar","cancelar"],["control_escolar","cancelar"],["control_escolar","ver_programas",{id:"EDU-P005"}]],
+"Datos ya cargados":()=>[["control_escolar","seed",{}]]};
+async function esc(n){let i=0;const steps=SC[n]();for(const [r,fn,a0] of steps){role=r;$("rol").value=r;const a={...(a0||{})};if(a.monto=="@t")a.monto=gs(last).tot;if(["aprobar","pago","completar","cancelar","resultado","cert"].includes(fn)&&!a.id)a.id=last;
+show(run(fn,a),n);sync();$("sid").value=last||"";sync();await new Promise(x=>setTimeout(x,i++?350:0))}}
+$("rol").innerHTML=Object.entries(R).map(([k,n])=>`<option value="${k}"${k==role?" selected":""}>${n}</option>`).join("");
+$("rol").onchange=()=>{role=v("rol")};
+$("sid").oninput=sync;
+reset();
+$("al").innerHTML=A.map(a=>`<option value="${a.id}">${a.id} · ${a.n}${a.pref?" · preferente":""}${a.act?"":" · inactivo"}</option>`).join("")+'<option value="EDU-C999">EDU-C999 · (no registrado)</option>';
+$("cu").innerHTML=P.map(p=>`<option value="${p.id}">${p.id} · ${p.n} · ${money(p.pr)}${p.hab?"":" · deshabilitado"}</option>`).join("")+'<option value="EDU-P999">EDU-P999 · (no existe)</option>';
+$("al").value="EDU-C005";
+$("fe").innerHTML+=Object.keys(SN).map(k=>`<option value="${k}">${SN[k]}</option>`).join("");
+$("chips").innerHTML=Object.keys(SC).map(n=>`<button class="o" onclick="esc(this.textContent)">${n}</button>`).join("");
+sync();
+</script></body></html>
